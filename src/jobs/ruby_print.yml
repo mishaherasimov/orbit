@@ -7,4 +7,7 @@ steps:
   - run:
       name: Testing ruby job
       shell: ruby
+      environment:
+        NUMBER_ONE: 5
+        NUMBER_TWO: 20
       command: <<include(scripts/hello.rb)>>
