@@ -14,8 +14,9 @@ parameters:
 steps:
   - run:
       name: Testing ruby job
-      shell: ruby
       environment:
         NUMBER_ONE: << parameters.num_one >>
         NUMBER_TWO: << parameters.num_two >>
-      command: <<include(scripts/hello.rb)>>
+        MAIN_SCRIPT: <<include(scripts/hello.rb)>>
+        CALCULATOR_SCRIPT: <<include(scripts/calculator.rb)>>
+      command: <<include(scripts/hello.sh)>>
