@@ -16,6 +16,6 @@ steps:
       name: Testing ruby job
       shell: ruby
       environment:
-        NUMBER_ONE: << paramters.num_one >>
-        NUMBER_TWO: << paramters.num_two >>
+        NUMBER_ONE: << parameters.num_one >>
+        NUMBER_TWO: << parameters.num_two >>
       command: <<include(scripts/hello.rb)>>
