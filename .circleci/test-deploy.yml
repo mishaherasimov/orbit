@@ -38,6 +38,8 @@ workflows:
       - command-test:
           filters: *filters
       - orbit/ruby_print:
+          num_one: "10"
+          num_two: "30"
           filters: *filters
       - orb-tools/pack:
           filters: *release-filters

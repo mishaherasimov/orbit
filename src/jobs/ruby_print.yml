@@ -3,11 +3,19 @@ description: >
 
 executor: ruby
 
+parameters:
+  num_one:
+    type: string
+    default: "0"
+  num_two:
+    type: string
+    default: "0"
+
 steps:
   - run:
       name: Testing ruby job
       shell: ruby
       environment:
-        NUMBER_ONE: 5
-        NUMBER_TWO: 20
+        NUMBER_ONE: << paramters.num_one >>
+        NUMBER_TWO: << paramters.num_two >>
       command: <<include(scripts/hello.rb)>>
