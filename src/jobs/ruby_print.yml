@@ -1,0 +1,10 @@
+description: >
+  This job is using ruby
+
+executor: ruby
+
+steps:
+  - run:
+      name: Testing ruby job
+      shell: ruby
+      command: <<include(scripts/hello.rb)>>
